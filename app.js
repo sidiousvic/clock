@@ -1,6 +1,8 @@
 const ssHand = document.querySelector('.ss');
 const mmHand = document.querySelector('.mm');
 const hhHand = document.querySelector('.hh');
+const lightmode = document.querySelector('.lightmode');
+const darkmode = document.querySelector('.darkmode');
 
 function tick() {
   // get date and hh:mm:ss
@@ -30,3 +32,25 @@ function tick() {
 setInterval(tick, 1000);
 
 tick();
+
+// switch stylesheets
+let switchStyles = styleSwitcher(); // closure over bool
+window.addEventListener('click', switchStyles.switch);
+
+// switch style
+function styleSwitcher() {
+  let dark = true;
+  return {
+    switch: () => {
+      if (dark === true) {
+        darkmode.rel = 'stylesheet';
+        lightmode.rel = 'alternate stylesheet';
+        dark = false;
+      } else if (dark !== true) {
+        lightmode.rel = 'stylesheet';
+        darkmode.rel = 'alternate stylesheet';
+        dark = true;
+      }
+    }
+  };
+}

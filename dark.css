@@ -1,9 +1,10 @@
 html {
   font-size: 10px;
-  background: url('./images/x') bottom center;
+  /* background: url('./images/x') bottom center; */
   background-size: cover;
   text-align: center;
   font-size: 10px;
+  background: #111;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
   transition: all 0.05s ease;
   width: 30rem;
   height: 30rem;
-  border: 1px solid black;
+  border: 8px solid rgb(255, 34, 0);
   border-radius: 50%;
 }
 
@@ -36,8 +37,8 @@ body {
 
 .hand {
   position: absolute;
-  background: black;
-  border-radius: 10px;
+  background: rgb(255, 34, 0);
+  border-radius: 20px;
   transform-origin: 100%;
   transition: all 0.09s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
@@ -46,19 +47,18 @@ body {
 
 .ss {
   width: 50%;
-  height: 2px;
+  height: 6px;
   right: 50%;
 }
 
 .mm {
   width: 40%;
-  height: 3px;
-
+  height: 6px;
   right: 50%;
 }
 
 .hh {
   width: 30%;
-  height: 4px;
+  height: 6px;
   right: 50%;
 }
